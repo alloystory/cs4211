@@ -1,6 +1,0 @@
-never {
-	do
-	:: printf("*spd* 2 %d %d 2 wantp %d wantq %d\n",
-		pc_value(0), pc_value(1), wantp, wantq)
-	od
-}

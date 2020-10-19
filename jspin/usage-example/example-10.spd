@@ -1,9 +1,0 @@
-#SpinSpider configuration file
-#Wed Sep 16 00:25:46 SGT 2020
-DOT_SIZE=0
-SPIDER_DEBUG=false
-TRAIL_CODE=0
-FORMAT=png
-PROCESSES=2
-VARIABLES=wantp\nwantq\n
-TRAIL_STYLE=0
