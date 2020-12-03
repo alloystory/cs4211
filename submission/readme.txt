@@ -1,0 +1,1 @@
+The trail files for each assignment is provided in each of their folders. To re-run the verification, load the `.trail` files into iSpin and run the trail files.

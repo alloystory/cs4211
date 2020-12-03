@@ -1,0 +1,16 @@
+never prop {    /* !(([] ((! (! ((wcp_status==1)))) || (<> ((wcp_status==1))))) && ([] ((! (wcp_cm?[update])) || (<> (((! (client_connected[0])) || (client_used_new_wthr[0])) && ((! (client_connected[1])) || (client_used_new_wthr[1]))))))) */
+T0_init:
+	do
+	:: (! ((! (! ((wcp_status==1))))) && ! (((wcp_status==1)))) -> goto accept_S5
+	:: (! ((! (wcp_cm?[update]))) && ! ((((! (client_connected[0])) || (client_used_new_wthr[0])) && ((! (client_connected[1])) || (client_used_new_wthr[1]))))) -> goto accept_S10
+	:: (1) -> goto T0_init
+	od;
+accept_S5:
+	do
+	:: (! (((wcp_status==1)))) -> goto accept_S5
+	od;
+accept_S10:
+	do
+	:: (! ((((! (client_connected[0])) || (client_used_new_wthr[0])) && ((! (client_connected[1])) || (client_used_new_wthr[1]))))) -> goto accept_S10
+	od;
+}
